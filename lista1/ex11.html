@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12</title>
+</head>
+<body>
+
+    <h1>Jogo: Pedra, Papel, Tesoura</h1>
+  
+    <p>Escolha sua jogada:</p>
+  
+    <button onclick="playGame('pedra')">Pedra</button>
+    <button onclick="playGame('papel')">Papel</button>
+    <button onclick="playGame('tesoura')">Tesoura</button>
+  
+    <div class="result" id="result"></div>
+  
+    <script>
+      function playGame(playerChoice) {
+        const choices = ['pedra', 'papel', 'tesoura'];
+        const computerChoice = choices[Math.floor(Math.random() * 3)];
+  
+        let result = '';
+  
+        if (playerChoice === computerChoice) {
+          result = 'Empate! Ambos escolheram ' + playerChoice;
+        } else if (
+          (playerChoice === 'pedra' && computerChoice === 'tesoura') ||
+          (playerChoice === 'papel' && computerChoice === 'pedra') ||
+          (playerChoice === 'tesoura' && computerChoice === 'papel')
+        ) {
+          result = 'Você venceu! ' + playerChoice + ' vence ' + computerChoice;
+        } else {
+          result = 'Você perdeu! ' + computerChoice + ' vence ' + playerChoice;
+        }
+  
+        document.getElementById('result').textContent = result;
+      }
+    </script>
+  
+  </body>
+  </html>

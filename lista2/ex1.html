@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    <script>
+
+        let operacao = Number(prompt("1 - Somar / 2 - Subtração / 3 - Multiplicação / 4 - Divisão"))
+        let num1 = Number(prompt("digite o 1° número: "))
+        let num2 = Number(prompt("digite o 2° número: "))
+
+        switch(operacao){
+            case 1:
+                const soma = (num1, num2) => num1 + num2
+                document.write(`O resultado é: ${num1} + ${num2} =  ${soma(num1, num2)} `)
+                break;
+            case 2:
+                const sub = (num1, num2) => num1 - num2
+                document.write(`O resultado é: ${num1} - ${num2} = ${sub(num1,num2)}`)
+                break;
+            case 3:
+                const multi = (num1, num2) => num1 * num2
+                document.write(`O resultado é: ${num1} * ${num2} = ${multi(num1,num2)}`)
+                break;
+            case 4:         
+                const div = (num1, num2) => num1 / num2
+                document.write(`O resultado é: ${num1} / ${num2} = ${div(num1,num2)}`)
+                break;
+                
+        }
+    </script>
+    
+</body>
+</html>
