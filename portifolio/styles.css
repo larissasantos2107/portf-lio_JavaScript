@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* Estilo geral do body */
 body {
     background-color: #121212;
     color: #fff;
@@ -12,8 +13,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
     text-align: center;
 }
 
@@ -29,12 +28,15 @@ body {
     top: 0;
     left: 0;
     z-index: 1000;
+    height: 125px; /* Ajuste conforme necessário */
 }
 
 .logo img {
-    max-height: 100px;
-    width: auto;
+    max-height: 170px; /* Aumente esse valor conforme necessário */
+    width: auto; /* Preserva as proporções da imagem */
+    margin-top: 20px; /* Adicione uma margem superior para descer a imagem */
 }
+
 
 /* Botão de fechamento (X) para a página Figma */
 .close-btn {
@@ -42,7 +44,7 @@ body {
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1.5rem;
+    font-size: 24px;
     color: #00f;
     text-decoration: none;
 }
@@ -57,13 +59,13 @@ body {
 }
 
 .header h1 {
-    font-size: 3rem;
+    font-size: 48px;
     line-height: 1.2;
 }
 
 .header p {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
+    font-size: 19px;
+    margin-top: 8px;
 }
 
 .highlight {
@@ -74,26 +76,32 @@ body {
 .cards-section {
     display: flex;
     justify-content: center;
-    gap: 2rem; /* Espaçamento horizontal entre os cards */
-    margin-top: 2rem;
+    gap: 32px; /* Espaçamento horizontal entre os cards */
+    margin-top: 32px;
+    height: auto;
 }
 
 .card {
     background-color: #1d1d1d;
-    padding: 2rem;
+    padding: 32px;
     border-radius: 10px;
     width: 250px;
-    margin-bottom: 2rem; /* Espaçamento vertical entre os cards */
+    margin-bottom: 32px; /* Espaçamento vertical entre os cards */
+    transition: transform 0.3s ease; /* Adiciona transição suave */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Efeito de levantar */
 }
 
 .card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 24px;
+    margin-bottom: 16px;
 }
 
 .card p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
+    font-size: 16px;
+    margin-bottom: 24px;
 }
 
 .card a {
@@ -110,7 +118,7 @@ body {
 .card-img {
     width: 100%;
     height: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
     border-radius: 8px;
 }
 
@@ -119,10 +127,10 @@ body {
     .cards-section {
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem; /* Ajusta o espaçamento entre os cards em telas menores */
+        gap: 24px; /* Ajusta o espaçamento entre os cards em telas menores */
     }
 
     .main-header {
-        padding: 1rem;
+        padding: 16px;
     }
 }

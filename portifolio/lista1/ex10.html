@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+<body>
+    <h1>Exercício 10</h1>
+    <h3>Ver se a nota 1 é ultiplo do seundo</h3>
+
+    <script>
+        // Solicita ao usuário que informe o número da tabuada
+        let tabuada = prompt("Informe o número da tabuada de 1 a 9");
+    
+        // Verifica se o valor informado é um número válido dentro do intervalo de 1 a 9
+        if (isNaN(tabuada) || tabuada === "" || tabuada < 1 || tabuada > 9) {
+            // Se o valor não for um número ou não estiver dentro do intervalo correto, exibe uma mensagem de erro
+            document.write("Por favor, insira um número válido de 1 a 9 para a tabuada.<br><br>");
+        } else {
+            // Converte o valor para número
+            tabuada = Number(tabuada);
+    
+            // Inicializa o contador
+            let contador = 1;
+    
+            // Laço de repetição para exibir a tabuada
+            while (contador <= 10) {
+                let soma = contador * tabuada;
+                document.write(`${tabuada} X ${contador} = ${soma} <br><br>`);
+                contador++;
+            }
+        }
+    </script>
+    
+                <a href="../lista01.html"><button>Voltar</button></a>
+
+</body>
+</html>

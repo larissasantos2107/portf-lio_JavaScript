@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+</head>
+<body>
+    <h1>Exercício 09</h1>
+    <h3>Converter a taxa de câmbio</h3>
+
+    <script>
+        // Solicita ao usuário que informe o valor em reais e a taxa de câmbio
+        let reais = prompt("Informe quanto tem em reais: ");
+        let taxa = prompt("Informe a taxa de câmbio: ");
+    
+        // Verifica se ambos os valores são números válidos e não estão vazios
+        if (isNaN(reais) || isNaN(taxa) || reais === "" || taxa === "") {
+            // Se algum dos valores não for um número ou for vazio, exibe uma mensagem de erro
+            document.write("Por favor, insira valores numéricos válidos para reais e taxa.<br><br>");
+        } else {
+            // Converte os valores para números
+            reais = Number(reais);
+            taxa = Number(taxa);
+    
+            // Calcula o valor convertido
+            let soma = reais * taxa;
+    
+            // Exibe o valor convertido
+            document.write(`O valor ficará ${soma} <br><br>`);
+        }
+    </script>
+    
+                <a href="../lista01.html"><button>Voltar</button></a>
+
+</body>
+</html>

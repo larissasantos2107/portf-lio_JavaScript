@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+<body>
+    <h1>Exercício 05</h1>
+    <h2>Vetor de string de 10 nomes devolve a posição</h2>
+
+    <h3>Lista de Nomes:</h3>
+    <ul id="listaNomes"></ul> <!-- Lista para mostrar os nomes na tela -->
+
+    <p id="resultado"></p> <!-- Onde o resultado será exibido -->
+    <button onclick="buscarNome()">Buscar Nome</button> <!-- Botão para buscar o nome -->
+
+    <script>
+        // Vetor de nomes inicializados
+        let nomes = ["Larissa", "Deborah", "Eloisa", "Fernanda", "Marcia", "Cristileny", "Rafael", "Brunna", "Jiulia", "Paulinho"];
+
+        // Exibe os nomes na tela
+        let listaNomes = document.getElementById('listaNomes');
+        nomes.forEach(function(nome) {
+            let li = document.createElement('li');
+            li.textContent = nome;
+            listaNomes.appendChild(li);
+        });
+
+        // Função para buscar o nome
+        function buscarNome() {
+            // Leitura de um novo nome
+            let novoNome = prompt("Digite um nome para buscar:");
+
+            // Busca pelo nome no vetor
+            let indice = nomes.indexOf(novoNome);
+
+            // Seleciona o elemento onde o resultado será mostrado
+            let resultado = document.getElementById('resultado');
+
+            // Verifica se o nome foi encontrado
+            if (indice !== -1) {
+                resultado.textContent = `Nome encontrado na posição: ${indice}`;
+            } else {
+                resultado.textContent = "Nome não encontrado!";
+            }
+        }
+    </script>
+            <a href="../lista03.html"><button>Voltar</button></a>
+
+</body>
+</html>

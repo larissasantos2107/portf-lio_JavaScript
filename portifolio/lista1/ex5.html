@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+<body>
+    <h1>Exercício 05</h1>
+    <h3>Calcular a área</h3>
+
+    <script>
+        // Solicita ao usuário que informe os valores da base e da altura
+        let base = prompt("Digite o valor da base: ");
+        let altura = prompt("Digite o valor da altura: ");
+    
+        // Verifica se ambos os valores são números válidos e não estão vazios
+        if (isNaN(base) || isNaN(altura) || base === "" || altura === "") {
+            // Se algum dos valores não for um número ou for vazio, exibe uma mensagem de erro
+            document.write("Por favor, insira valores numéricos válidos para a base e a altura.<br><br>");
+        } else {
+            // Converte os valores para números
+            base = Number(base);
+            altura = Number(altura);
+    
+            // Calcula a área do triângulo
+            let conta = (base * altura) / 2;
+    
+            // Exibe o resultado do cálculo da área
+            document.write(`A área do triângulo é ${conta}<br><br>`);
+        }
+    </script>
+    
+                <a href="../lista01.html"><button>Voltar</button></a>
+
+</body>
+</html>
