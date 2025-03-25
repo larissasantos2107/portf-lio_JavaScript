@@ -1,0 +1,128 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Estilo geral do header */
+.main-header {
+    width: 100%;
+    padding: 0;
+    background-color: #1d1d1d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    max-height: 100px;
+    width: auto;
+}
+
+/* Botão de fechamento (X) para a página Figma */
+.close-btn {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #00f;
+    text-decoration: none;
+}
+
+.close-btn:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do conteúdo */
+.header {
+    margin-top: 150px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.highlight {
+    color: #00f;
+}
+
+/* Seção de cards */
+.cards-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Espaçamento horizontal entre os cards */
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: #1d1d1d;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 250px;
+    margin-bottom: 2rem; /* Espaçamento vertical entre os cards */
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.card a {
+    color: #00f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Imagens dos cards */
+.card-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cards-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem; /* Ajusta o espaçamento entre os cards em telas menores */
+    }
+
+    .main-header {
+        padding: 1rem;
+    }
+}
