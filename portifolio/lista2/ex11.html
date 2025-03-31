@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11</title>
+    <script>
+        const calcularINSS = (salario) => {
+            let aliquota;
+
+            if (salario <= 1302) {
+                aliquota = 0.075; 
+            } else if (salario <= 2571.29) {
+                aliquota = 0.09; 
+            } else if (salario <= 3856.94) {
+                aliquota = 0.12; 
+            } else if (salario <= 7507.49) {
+                aliquota = 0.14;
+            } else {
+                aliquota = 0.14; 
+            }
+
+            const inss = salario * aliquota;
+            return inss.toFixed(2); 
+        };
+
+        function mostrarINSS() {
+            const salario = parseFloat(prompt("Digite o salário:"));
+            if (isNaN(salario) || salario < 0) {
+                alert("Por favor, insira um valor válido para o salário.");
+            } else {
+                const inss = calcularINSS(salario);
+                alert(`O valor do INSS para um salário de R$${salario.toFixed(2)} é R$${inss}`);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Exercício 11</h1>
+    <h2>Calculadora de INSS</h2>
+    <button onclick="mostrarINSS()">Calcular INSS</button>
+    <br><br>
+    <a href="../lista02.html"><button>Voltar</button></a>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <h1>Exercício 03</h1>
+    <h3>Idades acima da média</h3>
+    
+    <script>
+        const idades = [];
+        for (let i = 0; i < 20; i++) {
+            let idade = parseInt(prompt(`Digite a idade da pessoa ${i + 1}:`));
+            idades.push(idade);
+        }
+
+        const media = idades.reduce((soma, idade) => soma + idade, 0) / idades.length;
+
+        document.write("Idades acima da média:<br>");
+        for (let i = 0; i < idades.length; i++) {
+            if (idades[i] > media) {
+                document.write(`${idades[i]}<br>`);
+            }
+        }
+    </script>
+        <a href="../lista03.html"><button>Voltar</button></a>
+
+</body>
+</html>

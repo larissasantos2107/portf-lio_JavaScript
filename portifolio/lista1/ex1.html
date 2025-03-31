@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    <h1>Exercício 01</h1>
+    <h3>Diferença entre dois números</h3>
+
+    <script>
+        // Função para verificar se o valor inserido é um número válido
+        function isValidNumber(value) {
+            return !isNaN(value) && value !== '' && value !== null;
+        }
+
+        // Solicita ao usuário que insira o 1° número
+        let num1 = prompt("Digite o 1° número:");
+        
+        // Se o valor inserido for válido, converte para número, caso contrário exibe uma mensagem de erro
+        if (!isValidNumber(num1)) {
+            document.write("Por favor, insira um número válido para o 1° número.");
+        } else {
+            num1 = Number(num1); // Converte para número
+            
+            // Solicita ao usuário que insira o 2° número
+            let num2 = prompt("Digite o 2° número:");
+            
+            // Se o valor inserido for válido, converte para número, caso contrário exibe uma mensagem de erro
+            if (!isValidNumber(num2)) {
+                document.write("Por favor, insira um número válido para o 2° número.");
+            } else {
+                num2 = Number(num2); // Converte para número
+
+                // Calcula a diferença entre os dois números
+                let soma = (num1 - num2);
+
+                // Se o 1° número for maior que o 2°, exibe a diferença nessa ordem
+                if (num1 > num2) {
+                    document.write(`A diferença entre ${num1} e ${num2} é: ${soma}`);
+                } 
+                // Caso contrário, exibe a diferença com a ordem dos números invertida
+                else {
+                    document.write(`A diferença entre ${num2} e ${num1} é: ${soma}<br><br><br>`);
+                }
+            }
+        }
+    </script>
+
+    <!-- Botão para voltar para a página anterior -->
+    <a href="../lista01.html"><button>Voltar</button></a>
+</body>
+</html>

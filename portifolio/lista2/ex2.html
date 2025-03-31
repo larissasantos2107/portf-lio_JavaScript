@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <h1>Exercício 02</h1>
+    <h3>Inverter string</h3>
+    
+    <script>
+
+        function inverterPalavra(palavra) {
+            return palavra.split('').reverse().join('');
+        }
+
+        let palavra = prompt("Digite uma palavra: ");
+        let palavraInvertida = inverterPalavra(palavra);
+        document.write(`A palavra invertida é: ${palavraInvertida}<br><br>`)
+
+    </script>
+        <a href="../lista02.html"><button>Voltar</button></a>
+
+
+</body>
+</html>

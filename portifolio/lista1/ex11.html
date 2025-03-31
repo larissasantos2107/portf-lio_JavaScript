@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11</title>
+</head>
+<body>
+  <h1>Exercício 03</h1>
+
+  <h2>Jogo: Pedra, Papel, Tesoura</h2>
+  
+  <p>Escolha sua jogada:</p>
+  
+  <!-- Botões para o usuário escolher a jogada -->
+  <button onclick="playGame('pedra')">Pedra</button>
+  <button onclick="playGame('papel')">Papel</button>
+  <button onclick="playGame('tesoura')">Tesoura</button>
+  <br><br>
+  
+  <!-- Div onde o resultado do jogo será exibido -->
+  <div class="result" id="result"></div>
+  
+  <script>
+    // Função que executa o jogo
+    function playGame(playerChoice) {
+        // Definindo as opções válidas para o jogo
+        const validChoices = ['pedra', 'papel', 'tesoura'];
+        
+        // Verifica se a escolha do jogador é válida
+        if (!validChoices.includes(playerChoice)) {
+            // Se a escolha não for válida, exibe uma mensagem de erro
+            document.getElementById('result').textContent = "Escolha inválida! Por favor, selecione Pedra, Papel ou Tesoura.";
+            return; // Retorna sem fazer mais nada caso a escolha seja inválida
+        }
+
+        // Opções possíveis para o computador
+        const choices = ['pedra', 'papel', 'tesoura'];
+
+        // Escolhe aleatoriamente uma opção para o computador
+        const computerChoice = choices[Math.floor(Math.random() * 3)];
+  
+        let result = ''; // Variável para armazenar o resultado do jogo
+  
+        // Verifica o resultado do jogo
+        if (playerChoice === computerChoice) {
+            // Se a escolha do jogador for igual à do computador, é empate
+            result = 'Empate! Ambos escolheram ' + playerChoice;
+        } else if (
+          (playerChoice === 'pedra' && computerChoice === 'tesoura') ||
+          (playerChoice === 'papel' && computerChoice === 'pedra') ||
+          (playerChoice === 'tesoura' && computerChoice === 'papel')
+        ) {
+            // Se a escolha do jogador for a vencedora em relação à do computador, o jogador ganha
+            result = 'Você venceu! ' + playerChoice + ' vence ' + computerChoice;
+        } else {
+            // Caso contrário, o computador vence
+            result = 'Você perdeu! ' + computerChoice + ' vence ' + playerChoice;
+        }
+  
+        // Exibe o resultado do jogo na tela
+        document.getElementById('result').textContent = result;
+    }
+  </script>
+  
+  <!-- Botão para voltar para a página anterior -->
+  <a href="../lista01.html"><button>Voltar</button></a>
+
+</body>
+</html>

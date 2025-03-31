@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 13 </title>
+    <script>
+        const calcularParcelasFinanciamento = (valorFinanciado, taxaJuros, numParcelas) => {
+            // Fórmula simplificada
+            const parcela = (valorFinanciado + (valorFinanciado * taxaJuros * numParcelas)) / numParcelas;
+            return parcela.toFixed(2); // Retorna o valor da parcela com 2 casas decimais
+        };
+
+        function mostrarParcelas() {
+            const valorFinanciado = parseFloat(prompt("Digite o valor do financiamento (P):"));
+            const taxaJuros = parseFloat(prompt("Digite a taxa de juros (i) por período (em formato decimal, ex: 0.05 para 5%):"));
+            const numParcelas = parseInt(prompt("Digite o número de parcelas (n):"));
+
+            if (isNaN(valorFinanciado) || isNaN(taxaJuros) || isNaN(numParcelas) || valorFinanciado <= 0 || taxaJuros < 0 || numParcelas <= 0) {
+                alert("Por favor, insira valores válidos.");
+            } else {
+                const parcela = calcularParcelasFinanciamento(valorFinanciado, taxaJuros, numParcelas);
+                alert(`O valor da parcela é R$${parcela}`);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Exercício 13</h1>
+    <h2>Simulador de Financiamento</h2>
+    <button onclick="mostrarParcelas()">Calcular Parcelas</button>
+    <br><br>
+    <a href="../lista02.html"><button>Voltar</button></a>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    <h1>Exercício 04</h1>
+    <h3>Ler 10 números e apresentar se os valores são pares</h3>
+
+
+    <p id="resultado"></p> <!-- Exibição do resultado -->
+
+    <script>
+        let numeros = [];
+        let pares = [];
+
+        // Leitura dos 10 números
+        for (let i = 0; i < 10; i++) {
+            let numero = parseInt(prompt(`Digite o número ${i + 1}:`));
+            numeros.push(numero);
+
+            // Verifica se o número é par
+            if (numero % 2 === 0) {
+                pares.push(numero);
+            }
+        }
+
+        // Seleciona o elemento onde o resultado será mostrado
+        let resultado = document.getElementById('resultado');
+
+        // Verifica se há números pares e exibe a mensagem apropriada
+        if (pares.length > 0) {
+            resultado.textContent = `Números pares: ${pares.join(', ')}`;
+        } else {
+            resultado.textContent = "Todos os números são ímpares.";
+        }
+    </script>
+            <a href="../lista03.html"><button>Voltar</button></a>
+
+</body>
+</html>

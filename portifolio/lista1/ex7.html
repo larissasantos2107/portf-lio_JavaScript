@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+<body>
+    <h1>Exercício 07</h1>
+    <h3>IMC</h3>
+
+    <script>
+        // Solicita ao usuário que informe o peso e a altura
+        let peso = prompt("Informe seu peso: ");
+        let altura = prompt("Informe sua altura: ");
+    
+        // Verifica se o peso e a altura são números válidos e não estão vazios
+        if (isNaN(peso) || isNaN(altura) || peso === "" || altura === "" || altura <= 0) {
+            // Se algum dos valores não for um número, for vazio ou a altura for inválida, exibe uma mensagem de erro
+            document.write("Por favor, insira valores numéricos válidos para peso e altura. A altura deve ser maior que zero.<br><br>");
+        } else {
+            // Converte os valores para números
+            peso = Number(peso);
+            altura = Number(altura);
+    
+            // Calcula o IMC
+            let imc = peso / (altura ** 2);
+    
+            // Exibe o resultado do IMC
+            document.write(`Seu IMC é ${imc.toFixed(2)}<br><br>`);
+        }
+    </script>
+    
+                <a href="../lista01.html"><button>Voltar</button></a>
+
+</body>
+</html>

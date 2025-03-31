@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    <h1>Exercício 04</h1>
+    <h3>Converter a temperatura de celcius para Fahrenheit</h3>
+
+    <script>
+        // Solicita ao usuário que informe a temperatura em Celsius
+        let celsius = prompt("Informe a temperatura em graus Celsius: ");
+    
+        // Verifica se o valor informado é um número válido e não está vazio
+        if (isNaN(celsius) || celsius === "") {
+            // Se não for um número válido ou estiver vazio, exibe uma mensagem de erro
+            document.write("Por favor, informe um valor numérico válido para a temperatura em Celsius.<br><br>");
+        } else {
+            // Converte o valor informado para número
+            celsius = Number(celsius);
+    
+            // Calcula a temperatura em Fahrenheit
+            let conta = (celsius * 9/5) + 32;
+    
+            // Exibe o resultado da conversão
+            document.write(`A temperatura em Fahrenheit é ${conta}<br><br>`);
+        }
+    </script>
+    
+                <a href="../lista01.html"><button>Voltar</button></a>
+
+</body>
+</html>

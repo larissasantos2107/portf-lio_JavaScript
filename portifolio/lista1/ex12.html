@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12</title>
+</head>
+<body>
+  <h1>Exercício 12</h1>
+
+  <h3>Calculadora de Fatorial</h3>
+
+  <!-- Botão que chama a função de calcular o fatorial -->
+  <button onclick="solicitarNumero()">Calcular Fatorial</button>
+
+  <!-- Parágrafo onde o resultado do fatorial será exibido -->
+  <p id="resultado"></p>
+
+  <script>
+    // Função para calcular o fatorial de um número
+    function fatorial(n) {
+      let resultado = 1;  // Inicializa o resultado com 1 (o fatorial de 0 é 1)
+      
+      // Loop que vai multiplicando o número por todos os inteiros anteriores até 1
+      for (let i = 1; i <= n; i++) {
+          resultado *= i; // Multiplica o resultado pelo valor de i a cada iteração
+      }
+
+      return resultado;  // Retorna o resultado do fatorial
+    }
+
+    // Função que solicita o número ao usuário e calcula o fatorial
+    function solicitarNumero() {
+      // Solicita ao usuário que digite um número
+      const numero = prompt('Digite um número para calcular o fatorial:');
+      
+      // Verifica se o usuário forneceu um número válido (não vazio, não nulo e é um número)
+      if (numero !== null && numero !== '' && !isNaN(numero)) {
+        // Converte o número para tipo numérico e calcula o fatorial
+        const resultadoFatorial = fatorial(Number(numero));
+        
+        // Exibe o resultado do fatorial na página
+        document.getElementById('resultado').textContent = `O fatorial de ${numero} é: ${resultadoFatorial}`;
+      } else {
+        // Se o usuário não fornecer um número válido, exibe uma mensagem de erro
+        document.getElementById('resultado').textContent = 'Por favor, insira um número válido.';
+      }
+    }
+  </script>
+  
+  <!-- Botão para voltar à página anterior -->
+  <a href="../lista01.html"><button>Voltar</button></a>
+
+</body>
+</html>
