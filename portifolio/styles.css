@@ -82,12 +82,13 @@ body {
 }
 
 .card {
-    background-color: #1d1d1d;
+    background-color: rgb(39, 39, 39);
     padding: 32px;
     border-radius: 10px;
     width: 250px;
     margin-bottom: 32px; /* Espaçamento vertical entre os cards */
     transition: transform 0.3s ease; /* Adiciona transição suave */
+    box-shadow: 2px 4px 8px 8px #02308d;
 }
 
 .card:hover {
