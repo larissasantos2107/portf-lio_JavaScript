@@ -12,21 +12,22 @@
     
     <script>
 
-    function ordenarNumeros() {
-        const num1 = parseFloat(prompt("Digite o primeiro número:"));
-        const num2 = parseFloat(prompt("Digite o segundo número:"));
-        const num3 = parseFloat(prompt("Digite o terceiro número:"));
-
-        const numeros = [num1, num2, num3];
-
-        numeros.sort((a, b) => a - b);
-
-        document.write(`Números em ordem crescente: ${numeros.join(", ")}`);
-    }
-
-    ordenarNumeros();
-
+        function ordenarNumeros() { // Função para ordenar os números
+            const num1 = parseFloat(prompt("Digite o primeiro número:")); // Solicita o primeiro número e converte para float
+            const num2 = parseFloat(prompt("Digite o segundo número:")); // Solicita o segundo número e converte para float
+            const num3 = parseFloat(prompt("Digite o terceiro número:")); // Solicita o terceiro número e converte para float
+    
+            const numeros = [num1, num2, num3]; // Cria um array com os três números
+    
+            numeros.sort((a, b) => a - b); // Ordena os números em ordem crescente
+    
+            document.write(`Números em ordem crescente: ${numeros.join(", ")}`); // Exibe os números ordenados
+        }
+    
+        ordenarNumeros(); // Chama a função para ordenar e exibir os números
+    
     </script>
+    
     <br><br>
         <a href="../lista02.html"><button>Voltar</button></a>
 

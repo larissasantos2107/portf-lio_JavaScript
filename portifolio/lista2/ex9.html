@@ -6,35 +6,36 @@
     <link rel="icon" type="image/png" href="img/logo_cor.png">
     <title>Exercício 9</title>
     <script>
-        function validarFormulario() {
-
-            const nome = document.getElementById("nome").value;
-            const endereco = document.getElementById("endereco").value;
-            const sexo = document.querySelector('input[name="sexo"]:checked');
-            const telefone = document.getElementById("telefone").value;
-            const celular = document.getElementById("celular").value;
-            const email = document.getElementById("email").value;
-
-
+        function validarFormulario() { // Função para validar o formulário
+    
+            const nome = document.getElementById("nome").value; // Obtém o valor do campo 'Nome'
+            const endereco = document.getElementById("endereco").value; // Obtém o valor do campo 'Endereço'
+            const sexo = document.querySelector('input[name="sexo"]:checked'); // Obtém o valor do campo 'Sexo'
+            const telefone = document.getElementById("telefone").value; // Obtém o valor do campo 'Telefone'
+            const celular = document.getElementById("celular").value; // Obtém o valor do campo 'Celular'
+            const email = document.getElementById("email").value; // Obtém o valor do campo 'Email'
+    
+            // Verifica se algum campo está vazio
             if (!nome || !endereco || !sexo || !telefone || !celular || !email) {
-                if (!nome) {
-                    alert("Campo 'Nome' não pode estar vazio!");
-                } else if (!endereco) {
+                if (!nome) { // Se 'Nome' estiver vazio
+                    alert("Campo 'Nome' não pode estar vazio!"); 
+                } else if (!endereco) { // Se 'Endereço' estiver vazio
                     alert("Campo 'Endereço' não pode estar vazio!");
-                } else if (!sexo) {
+                } else if (!sexo) { // Se 'Sexo' não estiver selecionado
                     alert("Campo 'Sexo' não pode estar vazio!");
-                } else if (!telefone) {
+                } else if (!telefone) { // Se 'Telefone' estiver vazio
                     alert("Campo 'Telefone' não pode estar vazio!");
-                } else if (!celular) {
+                } else if (!celular) { // Se 'Celular' estiver vazio
                     alert("Campo 'Celular' não pode estar vazio!");
-                } else if (!email) {
+                } else if (!email) { // Se 'Email' estiver vazio
                     alert("Campo 'Email' não pode estar vazio!");
                 }
-                return false; 
+                return false; // Retorna false para impedir o envio do formulário
             }
-            return true; 
+            return true; // Retorna true para permitir o envio do formulário
         }
     </script>
+    
 </head>
 <body>
     <h1>Exercício 09</h1>

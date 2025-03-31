@@ -13,16 +13,17 @@
     
     <script>
 
-        function inverterPalavra(palavra) {
-            return palavra.split('').reverse().join('');
+        function inverterPalavra(palavra) { // Função para inverter a palavra
+            return palavra.split('').reverse().join(''); // Divide a palavra em um array de caracteres, inverte e junta novamente
         }
-
-        let palavra = prompt("Digite uma palavra: ");
-        let palavraInvertida = inverterPalavra(palavra);
-
-        document.write(`A palavra invertida é: ${palavraInvertida}<br><br>`)
-
+    
+        let palavra = prompt("Digite uma palavra: "); // Solicita ao usuário que digite uma palavra
+        let palavraInvertida = inverterPalavra(palavra); // Chama a função para inverter a palavra
+    
+        document.write(`A palavra invertida é: ${palavraInvertida}<br><br>`); // Exibe a palavra invertida
+    
     </script>
+    
         <a href="../lista02.html"><button>Voltar</button></a>
 
 </body>

@@ -10,33 +10,30 @@
     <h1>Exercício 01</h1>
     <h3>Calculadora</h3>
     <script>
-
-        let operacao = Number(prompt("1 - Somar / 2 - Subtração / 3 - Multiplicação / 4 - Divisão"))
-        let num1 = Number(prompt("digite o 1° número: "))
-        let num2 = Number(prompt("digite o 2° número: "))
-
-        switch(operacao){
+        let operacao = Number(prompt("1 - Somar / 2 - Subtração / 3 - Multiplicação / 4 - Divisão")) // Solicita a operação desejada
+        let num1 = Number(prompt("digite o 1° número: ")) // Solicita o primeiro número
+        let num2 = Number(prompt("digite o 2° número: ")) // Solicita o segundo número
+    
+        switch(operacao){ // Verifica qual operação o usuário escolheu
             case 1:
-                const soma = (num1, num2) => num1 + num2
-
-                document.write(`O resultado é: ${num1} + ${num2} =  ${soma(num1, num2)} <br><br>`)
+                const soma = (num1, num2) => num1 + num2 // Função para somar os números
+                document.write(`O resultado é: ${num1} + ${num2} =  ${soma(num1, num2)} <br><br>`) // Exibe o resultado da soma
                 break;
             case 2:
-                const sub = (num1, num2) => num1 - num2
-                document.write(`O resultado é: ${num1} - ${num2} = ${sub(num1,num2)}<br><br>`)
+                const sub = (num1, num2) => num1 - num2 // Função para subtrair os números
+                document.write(`O resultado é: ${num1} - ${num2} = ${sub(num1,num2)}<br><br>`) // Exibe o resultado da subtração
                 break;
             case 3:
-                const multi = (num1, num2) => num1 * num2
-                document.write(`O resultado é: ${num1} * ${num2} = ${multi(num1,num2)}<br><br>`)
+                const multi = (num1, num2) => num1 * num2 // Função para multiplicar os números
+                document.write(`O resultado é: ${num1} * ${num2} = ${multi(num1,num2)}<br><br>`) // Exibe o resultado da multiplicação
                 break;
             case 4:         
-                const div = (num1, num2) => num1 / num2
-                document.write(`O resultado é: ${num1} / ${num2} = ${div(num1,num2)}<br><br>`)
-
+                const div = (num1, num2) => num1 / num2 // Função para dividir os números
+                document.write(`O resultado é: ${num1} / ${num2} = ${div(num1,num2)}<br><br>`) // Exibe o resultado da divisão
                 break;
-                
         }
     </script>
+    
     <a href="../lista02.html"><button>Voltar</button></a>
 
     

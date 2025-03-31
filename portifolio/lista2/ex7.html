@@ -12,24 +12,25 @@
     
     <script>
 
-    function calcularCedulasAlternativo() {
-        let valor = parseInt(prompt("Digite o valor em reais:"));
-
-        const cedulas = [200, 100, 50, 20, 10, 5, 1];
-        let resultado = "";
-
-        for (let cedula of cedulas) {
-            let quantidade = Math.floor(valor / cedula);
-            valor %= cedula;  
-            resultado += `R$${cedula}: ${quantidade} cédula(s)<br>`;
+        function calcularCedulasAlternativo() { // Função para calcular as cédulas necessárias
+            let valor = parseInt(prompt("Digite o valor em reais:")); // Solicita o valor em reais
+    
+            const cedulas = [200, 100, 50, 20, 10, 5, 1]; // Define as cédulas disponíveis
+            let resultado = ""; // Variável para armazenar o resultado
+    
+            for (let cedula of cedulas) { // Loop para percorrer cada cédula
+                let quantidade = Math.floor(valor / cedula); // Calcula quantas cédulas de cada valor são necessárias
+                valor %= cedula;  // Atualiza o valor para o restante após retirar as cédulas
+                resultado += `R$${cedula}: ${quantidade} cédula(s)<br>`; // Adiciona o resultado da quantidade de cédulas
+            }
+    
+            document.write(resultado); // Exibe o resultado na página
         }
-
-        document.write(resultado);
-    }
-
-    calcularCedulasAlternativo();
-
+    
+        calcularCedulasAlternativo(); // Chama a função para realizar o cálculo das cédulas
+    
     </script>
+    
     <br><br>
     <a href="../lista02.html"><button>Voltar</button></a>
 

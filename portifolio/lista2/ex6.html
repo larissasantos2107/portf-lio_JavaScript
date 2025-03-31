@@ -12,16 +12,17 @@
     
     <script>
 
-    function converterHorasParaMinutos() {
-        const horas = parseFloat(prompt("Digite o número de horas:"));
-        const minutos = horas * 60;
-
-        document.write(`${horas} horas equivalem a ${minutos} minutos.`);
-    }
-
-    converterHorasParaMinutos();
-
+        function converterHorasParaMinutos() { // Função para converter horas em minutos
+            const horas = parseFloat(prompt("Digite o número de horas:")); // Solicita o número de horas e converte para float
+            const minutos = horas * 60; // Converte as horas para minutos (multiplica por 60)
+    
+            document.write(`${horas} horas equivalem a ${minutos} minutos.`); // Exibe o resultado na página
+        }
+    
+        converterHorasParaMinutos(); // Chama a função para realizar a conversão
+    
     </script>
+    
     <br><br>
     <a href="../lista02.html"><button>Voltar</button></a>
 

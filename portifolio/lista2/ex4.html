@@ -10,20 +10,19 @@
     <h1>Exercício 04</h1>
     <h3>Pedir a idade e ver se pode tirar a habilitação</h3>
     <script>
-
-    function verificarIdade() {
-            const idade = prompt("Qual é a sua idade?");
-
-
-            if (idade >= 18) {
-                document.write("Você pode tirar carteira de motorista!");
+        function verificarIdade() { // Função para verificar a idade e se a pessoa pode tirar a carteira
+            const idade = prompt("Qual é a sua idade?"); // Solicita a idade ao usuário
+    
+            if (idade >= 18) { // Verifica se a idade é 18 ou maior
+                document.write("Você pode tirar carteira de motorista!"); // Exibe mensagem se a idade for maior ou igual a 18
             } else {
-                document.write("Você ainda não pode tirar carteira de motorista.");
+                document.write("Você ainda não pode tirar carteira de motorista."); // Exibe mensagem caso a idade seja menor que 18
             }
         }
-
-        verificarIdade(); 
+    
+        verificarIdade(); // Chama a função para verificar a idade
     </script>
+    
     <br><br>
         <a href="../lista02.html"><button>Voltar</button></a>
 

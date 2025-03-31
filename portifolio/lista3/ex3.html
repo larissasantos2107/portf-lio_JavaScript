@@ -11,21 +11,24 @@
     <h3>Idades acima da média</h3>
     
     <script>
-        const idades = [];
+        const idades = []; // Array para armazenar as idades
+    
         for (let i = 0; i < 20; i++) {
-            let idade = parseInt(prompt(`Digite a idade da pessoa ${i + 1}:`));
-            idades.push(idade);
+            let idade = parseInt(prompt(`Digite a idade da pessoa ${i + 1}:`)); // Solicita a idade de 20 pessoas
+            idades.push(idade); // Adiciona a idade no array
         }
-
-        const media = idades.reduce((soma, idade) => soma + idade, 0) / idades.length;
-
-        document.write("Idades acima da média:<br>");
+    
+        const media = idades.reduce((soma, idade) => soma + idade, 0) / idades.length; // Calcula a média das idades
+    
+        document.write("Idades acima da média:<br>"); // Exibe o texto "Idades acima da média"
+        
         for (let i = 0; i < idades.length; i++) {
-            if (idades[i] > media) {
-                document.write(`${idades[i]}<br>`);
+            if (idades[i] > media) { // Verifica se a idade é maior que a média
+                document.write(`${idades[i]}<br>`); // Exibe a idade que está acima da média
             }
         }
     </script>
+    
         <a href="../lista03.html"><button>Voltar</button></a>
 
 </body>
